@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/home/aad/Desktop/code/dailyPractice/6_30July23_Java/.metadata/.plugins/org.eclipse.jdt.core
+2200650775.index
+421271001.index
+1865797976.index

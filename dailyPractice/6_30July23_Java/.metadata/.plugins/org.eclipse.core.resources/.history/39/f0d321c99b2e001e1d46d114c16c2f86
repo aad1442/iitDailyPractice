@@ -1,0 +1,26 @@
+package iterator;
+import java.util.ArrayList;
+import java.util.ListIterator;
+
+public class Iterator {
+	
+	public static void main(String[] args) {
+		final String[] array= {"adfg","dfgdfg","sdfgsd","dfgdf"};
+		
+		ArrayList<String>list = new ArrayList<>();
+		for(String n: array) {
+			list.add(n);
+		}
+		
+		ListIterator<String> iterator = list.listIterator();
+		
+		while(iterator.next().equals("sdfgsd")) {
+			System.out.println(iterator.next());
+			//list.remove(iterator.nextIndex());
+		}
+		System.out.println(list);
+		
+
+	}
+
+}

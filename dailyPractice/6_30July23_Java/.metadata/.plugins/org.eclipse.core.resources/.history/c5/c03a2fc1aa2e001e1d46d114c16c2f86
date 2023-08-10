@@ -1,0 +1,63 @@
+package slideCode;
+import java.util.List;
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+public class ListTest {
+	
+	private static final String colors1[] = { "black", "yello", "green", "blue","silve","voilet"};
+	private static final String colors2[] = { "gold","white","brown","blue","silver","violet"};
+	
+	public void Printlist(List<String> l) {
+		ListIterator<String> iterator = l.listIterator();
+		
+		while(iterator.hasNext()) {
+			System.out.print(iterator.next()+", ");
+		}
+		
+	}
+	
+	public void ConvertToUpperStrings(List<String>l) {
+		ListIterator<String> i = l.listIterator();
+		while(i.hasNext()) {
+			i.next().toUpperCase();
+		}
+	}
+	
+	public void removeItems(List<String>l,int i, int f) {
+		System.out.println("Removed list: ");
+		for(int a = i;a<f;a++) {
+			l.remove(a);
+		}
+	}
+	public void PrintReverseList(List<String>l) {
+		ListIterator<String> i = l.listIterator(l.size());
+		while(i.hasPrevious()) {
+			System.out.println(i.previous());
+		}
+	}
+	
+	public ListTest() {
+		List<String> list1 = new LinkedList<String>();
+		List<String> list2 = new LinkedList<String>();
+		
+		for(String s: colors1) {
+			list1.add(s);
+		}
+		for(String s: colors2) {
+			list2.add(s);
+		}
+		
+		list1.addAll(list2);
+		list2 = null;
+		Printlist(list1);
+		ConvertToUpperStrings(list1);
+		Printlist(list1);
+	}
+
+	public static void main(String[] args) {
+		ListTest l = new ListTest();
+
+	}
+
+}
