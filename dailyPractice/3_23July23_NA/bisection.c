@@ -8,7 +8,7 @@
 	*pa = 25;
 	*(&a) = 25;	
 */
-#define f(x) (x*x - 5*x + 6)
+#define f(x) (x*x*x + 4*x*x -10)
 #define EPSILON 10e-12
 
 double a, b, c;
