@@ -22,7 +22,7 @@ void list_network_connections()
     system("netstat -tunap | grep ESTABLISHED");
 }
 
-// Monitor CPU usage in real-time
+//aad
 void monitor_cpu_usage()
 {
     pid_t pid = fork();
