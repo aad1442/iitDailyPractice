@@ -110,17 +110,22 @@ for (i = 0; i < MAX_STATES; i++) {
     int *next_states_queue = malloc(MAX_STATES*MAX_STATES * sizeof(int));
      int f1= 0;
      int r1= 0;
+     int fp;
+     int rp;
      enqueue(next_states_queue, &r1, ps);
     
 
     for(int i=0;i<strlength;i++){
-
-        while (f1 != r1) {
+        fp = f1;
+        rp = r1;
+        while (fp != rp) {
             int current_state = dequeue(next_states_queue, &f1);
+            fp++;
             printf("Current state is : %d",current_state);
             for (k = 0; k < MAX_STATES; k++) {
                 if (mat[current_state][str[i]][k] != -1) {
                     enqueue(next_states_queue, &r1, mat[current_state][str[i]][k]);
+                    rp++;
                 } else {
                     break;
                 }
@@ -129,12 +134,18 @@ for (i = 0; i < MAX_STATES; i++) {
         
     }
 
-    if (ps == fs) {
-        printf("Accepted\n");
+bool isAccepted = false;
+for (int i = f1; i < r1; i++) {
+    if (next_states_queue[i] == fs) {
+        isAccepted = true;
+        break;
     }
-    else {
-        printf("Rejected\n");
-    }
+}
 
-    return 0;
+if (isAccepted) {
+    printf("Accepted\n");
+} else {
+    printf("Rejected\n");
+}
+
 }

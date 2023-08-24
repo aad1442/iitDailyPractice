@@ -67,8 +67,6 @@ int main()
         printf("\n%d\n",str[i]);
     }
     for(i=0;i<strlength;i++){
-        printf("Now present state is %d\n",ps);
-        printf("Now present state is %d\n",mat[ps][str[i]]);
         ps= mat[ps][str[i]];
         printf("Now present state is %d\n",ps);
     }

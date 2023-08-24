@@ -12,7 +12,7 @@ int main()
     int count = 0;
     double k = (b - a) / 20;
     a = a - k;
-    b = a;
+    b = a; 
 
     for (int i = 0; i < 20; i++)
     {

@@ -76,6 +76,6 @@ int main()
     double root = bisection(a,b);
     printf("Root is %lf\n",root);
     if(root>0){
-        printf("Integral value: %lf",simpson(a,root,10));
+        printf("Integral value:T; %lf",simpson(a,root,10));
     }
 }
