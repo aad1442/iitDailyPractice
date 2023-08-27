@@ -1,8 +1,0 @@
-package Collections;
-
-public class ColloctionAlgorithms {
-	public static void main(String[] args) {
-		System.out.println("show");
-	}
-
-}
