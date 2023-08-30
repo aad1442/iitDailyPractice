@@ -266,6 +266,4 @@ printf("\nTransition Table for NFA\n");
 
     return 0;
 
-
-
 }
