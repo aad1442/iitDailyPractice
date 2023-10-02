@@ -1,0 +1,20 @@
+package file;
+
+	// Fig. 14.5: FileDemonstrationTest.java
+	// Testing the FileDemonstration class.
+	import java.util.Scanner;
+	
+	public class FileDemostrationTest
+	{
+	   public static void main( String args[] )
+	   {
+	      Scanner input = new Scanner( System.in );
+	      FileDemonstration application = new FileDemonstration();
+	
+	      System.out.print( "Enter file or directory name here: " );
+	      //String fileName = input.nextLine();
+	      //System.out.print(fileName);
+	      application.analyzePath( input.nextLine() );
+	   } // end main
+	} // end class FileDemonstrationTest
+

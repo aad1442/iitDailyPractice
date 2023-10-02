@@ -1,0 +1,22 @@
+tcp        0      0 10.34.0.132:50832       142.251.175.94:443      ESTABLISHED 3145/chrome --type= 
+tcp        0     42 10.34.0.132:33670       20.50.80.209:443        ESTABLISHED 6243/Code --standar 
+tcp        0      0 10.34.0.132:43280       64.233.170.95:443       ESTABLISHED 3145/chrome --type= 
+tcp        0      0 10.34.0.132:45134       74.125.200.91:443       ESTABLISHED 3145/chrome --type= 
+tcp        0      0 10.34.0.132:60598       52.139.250.209:443      ESTABLISHED 3145/chrome --type= 
+tcp        0      0 10.34.0.132:60592       52.139.250.209:443      ESTABLISHED 3145/chrome --type= 
+tcp        0      0 10.34.0.132:43296       64.233.170.95:443       ESTABLISHED 3145/chrome --type= 
+tcp        0      0 10.34.0.132:59658       140.82.114.25:443       ESTABLISHED 3145/chrome --type= 
+tcp        0      0 10.34.0.132:52110       142.251.175.94:443      ESTABLISHED 3145/chrome --type= 
+tcp        0    517 10.34.0.132:49906       52.182.141.63:443       ESTABLISHED 6292/Code --standar 
+tcp6       0      0 2405:ac80:c10:304:55288 2404:6800:4003:c03:5228 ESTABLISHED 3145/chrome --type= 
+tcp6       0      0 2405:ac80:c10:304:48320 2404:6800:4003:c00::443 ESTABLISHED 3145/chrome --type= 
+udp        0      0 10.34.0.132:68          10.34.0.1:67            ESTABLISHED -                   
+udp6       0      0 2405:ac80:c10:304:58272 2404:6800:4003:c01::443 ESTABLISHED 3145/chrome --type= 
+udp6       0      0 2405:ac80:c10:304:54858 2404:6800:4003:c01::443 ESTABLISHED 3145/chrome --type= 
+udp6       0      0 2405:ac80:c10:304:59055 2404:6800:4003:c00::443 ESTABLISHED 3145/chrome --type= 
+udp6       0      0 2405:ac80:c10:304:55026 2404:6800:4003:c02::443 ESTABLISHED 3145/chrome --type= 
+udp6       0      0 2405:ac80:c10:304:55448 2402:f500:1:9::c:443    ESTABLISHED 3145/chrome --type= 
+udp6       0      0 2405:ac80:c10:304:51605 2404:6800:4003:c04::443 ESTABLISHED 3145/chrome --type= 
+udp6       0      0 2405:ac80:c10:304:40274 2404:6800:4003:c02::443 ESTABLISHED 3145/chrome --type= 
+udp6       0      0 2405:ac80:c10:304:53370 2404:6800:4003:c04::443 ESTABLISHED 3145/chrome --type= 
+udp6       0      0 2405:ac80:c10:304:45207 2404:6800:4003:c04::443 ESTABLISHED 3145/chrome --type= 

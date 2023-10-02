@@ -1,0 +1,8 @@
+INDEX VERSION 1.132+/home/aad/Desktop/code/dailyPractice/.metadata/.plugins/org.eclipse.jdt.core
+3865088883.index
+1865797976.index
+438441389.index
+946660228.index
+1783161122.index
+421271001.index
+677947076.index

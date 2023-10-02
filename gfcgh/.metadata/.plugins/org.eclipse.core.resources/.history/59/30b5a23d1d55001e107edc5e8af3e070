@@ -1,0 +1,43 @@
+	1	// Fig. 14.4: FileDemonstration.java
+	2	// Demonstrating the File class.
+	3	import java.io.File;
+	4	
+	5	public class FileDemonstration
+	6	{
+	7	   // display information about file user specifies
+	8	   public void analyzePath( String path )
+	9	   {
+	10	      // create File object based on user input
+	11	      File name = new File( path );
+	12	
+	13	      if ( name.exists() ) // if name exists, output information about it
+	14	      {
+	15	         // display file (or directory) information
+	16	         System.out.printf(
+	17	            "%s%s\n%s\n%s\n%s\n%s%s\n%s%s\n%s%s\n%s%s\n%s%s",
+	18	            name.getName(), " exists",
+	19	            ( name.isFile() ? "is a file" : "is not a file" ),
+	20	            ( name.isDirectory() ? "is a directory" : 
+	21	               "is not a directory" ),
+	22	            ( name.isAbsolute() ? "is absolute path" : 
+	23	               "is not absolute path" ), "Last modified: ",
+	24	            name.lastModified(), "Length: ", name.length(), 
+	25	            "Path: ", name.getPath(), "Absolute path: ",
+	26	            name.getAbsolutePath(), "Parent: ", name.getParent() );
+	27	
+	28	         if ( name.isDirectory() ) // output directory listing
+	29	         {
+	30	            String directory[] = name.list();
+	31	            System.out.println( "\n\nDirectory contents:\n" );
+	32	   
+	33	            for ( String directoryName : directory )
+	34	               System.out.printf( "%s\n", directoryName );
+	35	         } // end else
+	36	      } // end outer if
+	37	      else // not file or directory, output error message
+	38	      {
+	39	         System.out.printf( "%s %s", path, "does not exist." );
+	40	      } // end else  
+	41	   } // end method analyzePath
+	42	} // end class FileDemonstration
+

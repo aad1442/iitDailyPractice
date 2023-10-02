@@ -1,0 +1,26 @@
+Network Connections:
+Protocol: 2:
+Local Address: 8400220A:D1AE
+Remote Address: 826D450D:01BB
+State: 01
+
+Protocol: 3:
+Local Address: 8400220A:ECB6
+Remote Address: D1FA8B34:01BB
+State: 01
+
+Protocol: 4:
+Local Address: 8400220A:D1A2
+Remote Address: 826D450D:01BB
+State: 01
+
+Protocol: 5:
+Local Address: 8400220A:ECB0
+Remote Address: D1FA8B34:01BB
+State: 01
+
+Protocol: 6:
+Local Address: 8400220A:D5BC
+Remote Address: 1971528C:01BB
+State: 01
+

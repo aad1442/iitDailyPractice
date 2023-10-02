@@ -1,0 +1,135 @@
+#include <iostream>
+#include<stdio.h>
+#include<queue>
+#include<string>
+#include<iomanip>
+
+using namespace std;
+#define SIZE 100
+#define INFINITY 1000000
+
+int w[SIZE][SIZE], d[SIZE];
+int previous[SIZE];
+int n = 0;
+bool flag[SIZE];
+string name[SIZE];
+
+void initialize_single_source(int s)
+{
+    for (int v = 0; v < n; v++)
+    {
+        d[v] = INFINITY;
+        previous[v] = -1;
+    }
+    d[s] = 0;
+}
+
+void relax(int u, int v)
+{
+    if(d[v] > d[u] + w[u][v])
+    {
+        d[v] = d[u] + w[u][v];
+        previous[v] = u;
+    }
+}
+
+int extract_min(){
+    int m = INFINITY, index=-1;
+
+    for(int i=0; i<n; i++){
+        if(flag[i] && m > d[i]){
+            m = d[i];
+            index = i;
+        }
+    }
+    return index;
+}
+
+void dijkstra(int s)
+{
+    initialize_single_source(s);
+
+    for(int i=0; i<n; i++){ //Q <- V[G]
+        flag[i] = true;
+    }
+    int queueSize = n;
+    while(queueSize)
+    {
+        int u = extract_min();
+        for (int v = 0; v < n; v++)
+        {
+            if(w[u][v] > 0)
+            {
+                relax(u, v);
+            }
+        }
+    }
+}
+
+void readInput()
+{
+    int u, v;
+    string s;
+    while (cin>>s)
+    {
+        if(s == "END")
+            break;
+
+        for(u = 0; u < n; u++)
+        {
+            if(name[u] == s)
+                break;
+        }
+        if (u == n)
+        {
+            name[n] = s;
+            n++;
+        }
+
+        cin >> s;
+        for(v = 0; v < n; v++)
+        {
+            if(name[v] == s)
+                break;
+        }
+        if (v == n)
+        {
+            name[n] = s;
+            n++;
+        }
+
+        cin >> w[u][v];
+
+    }
+}
+
+#include <iomanip> // Include the header for setw
+
+void printGraph()
+{
+    for (int u = 0; u < n; u++ )
+    {
+        for(int v = 0; v < n; v++)
+        {
+            if (u == v) {
+                cout << setw(4) << "0 "; // Distance from a vertex to itself is 0
+            }
+            else if (w[u][v] == 0) {
+                cout << setw(4) << "-1 "; // Indicate that they have the same distance
+            }
+            else {
+                cout << setw(4) << w[u][v] << " "; // Print the actual distance
+            }
+        }
+        cout << "\n";
+    }
+}
+
+int main()
+{
+    freopen("input.txt","r",stdin);
+    readInput();
+    printGraph();
+    printf("sumon");
+    return 0;
+}
